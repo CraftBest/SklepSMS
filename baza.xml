@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="test" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="sms_history">
+                CREATE TABLE `sms_history` (
+                  `id` int(6) NOT NULL AUTO_INCREMENT,
+                  `svr_id` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `status` int(1) NOT NULL,
+                  `kod` varchar(8) DEFAULT NULL,
+                  `usluga` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `nick` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `koszt` int(4) NOT NULL,
+                  `pozostale_pkt` int(6) NOT NULL,
+                  `data` varchar(255) NOT NULL,
+                  `godzina` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="sms_shop">
+                CREATE TABLE `sms_shop` (
+                  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `name` varchar(64) CHARACTER SET utf8 NOT NULL,
+                  `description` text CHARACTER SET utf8 NOT NULL,
+                  `sms_numer` int(8) DEFAULT NULL,
+                  `sms_tresc` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+                  `sms_hpay_id` int(8) DEFAULT NULL,
+                  `sms_price` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+                  `color` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT 'E49E25',
+                  `cmd1` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `cmd2` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `cmd3` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `cmd4` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `cmd5` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `cmd6` varchar(255) CHARACTER SET utf8 NOT NULL,
+                  `discount` varchar(5) CHARACTER SET utf8 DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="sms_sliders">
+                CREATE TABLE `sms_sliders` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `svr_id` int(1) NOT NULL DEFAULT '1',
+                  `img_path` varchar(128) NOT NULL,
+                  `href` varchar(64) NOT NULL,
+                  `description` varchar(128) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="sms_voucher">
+                CREATE TABLE `sms_voucher` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `kod` varchar(8) NOT NULL,
+                  `status` int(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=304 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Baza danych: 'test'
+    -->
+    <database name="test">
+        <!-- Table sms_history -->
+        <table name="sms_history">
+            <column name="id">1</column>
+            <column name="svr_id">Test Sklepu</column>
+            <column name="status">1</column>
+            <column name="kod">957BMGI6</column>
+            <column name="usluga">Ranga &lt;b&gt;VIP&lt;/b&gt;</column>
+            <column name="nick">test</column>
+            <column name="koszt">0</column>
+            <column name="pozostale_pkt">0</column>
+            <column name="data">2015/01/25</column>
+            <column name="godzina">18:58</column>
+        </table>
+        <table name="sms_history">
+            <column name="id">2</column>
+            <column name="svr_id">Test Sklepu</column>
+            <column name="status">1</column>
+            <column name="kod">AT16R1GC</column>
+            <column name="usluga">Ranga &lt;b&gt;S&lt;/b&gt;uper&lt;b&gt;VIP&lt;/b&gt;</column>
+            <column name="nick">tst</column>
+            <column name="koszt">0</column>
+            <column name="pozostale_pkt">0</column>
+            <column name="data">2015/01/25</column>
+            <column name="godzina">19:03</column>
+        </table>
+        <table name="sms_history">
+            <column name="id">3</column>
+            <column name="svr_id"></column>
+            <column name="status">0</column>
+            <column name="kod">f2333ec3</column>
+            <column name="usluga">Testowa usÅ‚uga</column>
+            <column name="nick">Niedzu</column>
+            <column name="koszt">0</column>
+            <column name="pozostale_pkt">0</column>
+            <column name="data">2015/02/02</column>
+            <column name="godzina">21:57</column>
+        </table>
+        <!-- Table sms_shop -->
+        <table name="sms_shop">
+            <column name="id">1</column>
+            <column name="name">Testowa usługa</column>
+            <column name="description">Testowy opis &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Testowy opis&lt;/b&gt;&lt;br/&gt;Testowy opis</column>
+            <column name="sms_numer">123456</column>
+            <column name="sms_tresc">HPAY.XXXXX</column>
+            <column name="sms_hpay_id">8290</column>
+            <column name="sms_price">7.38</column>
+            <column name="color">A11616</column>
+            <column name="cmd1">tak okresla sie nick gracza [nick]</column>
+            <column name="cmd2">bc Gracz [nick] wlasnie kupil cos</column>
+            <column name="cmd3">kolejna komenda</column>
+            <column name="cmd4">kolejna komenda</column>
+            <column name="cmd5">kolejna komenda</column>
+            <column name="cmd6">kolejna komenda</column>
+            <column name="discount">NULL</column>
+        </table>
+        <table name="sms_shop">
+            <column name="id">2</column>
+            <column name="name">Testowa usługa</column>
+            <column name="description">Testowy opis &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Testowy opis&lt;/b&gt;&lt;br/&gt;Testowy opis</column>
+            <column name="sms_numer">123456</column>
+            <column name="sms_tresc">HPAY.XXXXX</column>
+            <column name="sms_hpay_id">8290</column>
+            <column name="sms_price">7.38</column>
+            <column name="color">A51c16</column>
+            <column name="cmd1">tak okresla sie nick gracza [nick]</column>
+            <column name="cmd2">bc Gracz [nick] wlasnie kupil cos</column>
+            <column name="cmd3">kolejna komenda</column>
+            <column name="cmd4">kolejna komenda</column>
+            <column name="cmd5">kolejna komenda</column>
+            <column name="cmd6">kolejna komenda</column>
+            <column name="discount">NULL</column>
+        </table>
+        <!-- Table sms_sliders -->
+        <table name="sms_sliders">
+            <column name="id">1</column>
+            <column name="svr_id">6</column>
+            <column name="img_path">images/slides/slide7.jpg</column>
+            <column name="href">#</column>
+            <column name="description">Bądź genialny w tym co robisz!</column>
+        </table>
+        <table name="sms_sliders">
+            <column name="id">2</column>
+            <column name="svr_id">6</column>
+            <column name="img_path">images/slides/slide5.jpg</column>
+            <column name="href">#</column>
+            <column name="description">Zmień granice epickości!</column>
+        </table>
+        <!-- Table sms_voucher -->
+    </database>
+</pma_xml_export>

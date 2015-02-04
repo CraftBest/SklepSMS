@@ -14,8 +14,6 @@
 	$svr_rcon_port	= "port_rcon";
 	$svr_rcon_pass  = "haslo_rcon";
 	
-	//Nazwa serwera 
-	$svr_name		= "nazwa_rcon";
 	
 	//Konfiguracja API - profit lub hpay
 	$api 			= "hpay"; //Dla ProfitSMS - profit, Dla HomePay - hpay

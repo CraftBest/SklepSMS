@@ -27,3 +27,9 @@ V 3.2
 - Panel do dodawanie usług (domena.plindex.php?action=dodaj)
 - Generowanie vouchera dla danej usługi, można również wybrać ilość voucherów do wygenerowania
 - Uswanie usuług oraz lista usług w panelu z voucherami (domena.plindex.php?action=voucher)
+
+V 3.3
+
+- Usunięto i zoptymalizowano kod
+- Naprawiono ostatnie zakupy
+- Dodano liste usług w panelu 

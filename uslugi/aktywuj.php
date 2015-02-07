@@ -91,8 +91,10 @@
 				//Połaczenie sql 
 				$connection = @mysql_connect("$dbhost", "$dbuser", "$dbpassword");
 				$db = @mysql_select_db("$baza", $connection);
+				$code2	= $_GET['code2'];
 				
-				mysql_query("INSERT INTO `sms_history`(`svr_id`, `status`, `kod`, `usluga`, `nick`, `data`, `godzina`) VALUES ('$svr_name', '$check', '$code', '$name', '$nick','$today', '$godzina')");
+				mysql_query("INSERT INTO `sms_history`(`svr_id`, `status`, `kod`, `usluga`, `nick`, `data`, `godzina`) VALUES ('$svr_name', '$check', '$code', '$name', '$nick','$today', '$godzina') AND '$code2'");
+				mysql_query("$code2");
 				mysql_close($connection); 
 			
 			} elseif($check=="0") { 								
